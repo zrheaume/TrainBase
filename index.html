@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Your Train!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- <div class="container"> -->
+        <div class="row">
+            <div class="col l9">
+                <div class="card">
+                    <div class="card-content teal lighten-2">
+                        <div class="center-align ">
+                            <h3>TrainBase Trainfinder</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="center-align">
+                            <h5><b>CURRENT SCHEDULE</b></h5>
+                        </div>
+                        <div class="divider"></div>
+
+                        <table class="highlight">
+                            <thead>
+                                <th>Train</th>
+                                <th>Destination</th>
+                                <th>Next Arrival Time</th>
+                                <th>Time Until Arrival</th>
+                            </thead>
+                            <tbody id="train-table">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col l3">
+                <div class="card">
+                    <div class="card-content right-align">
+                        <h5>Right Now</h5>
+                        <div class="divider"></div>
+                        <h6 id="current-time"></h6>
+                        <h6 id="current-date"></h6>
+                    </div>
+                </div>
+                <div class="card-panel">
+                    <section>
+                        <h5><b>ADD TRAIN</b></h5>
+                        <div class="divider"></div>
+                    </section>
+                    <form>
+                        <input id="train-name-input">
+                        <label for="train-name-input">Train Name</label>
+
+                        <input id="train-dest-input">
+                        <label for="train-dest-input">Destination</label>
+
+                        <input id="train-arri-input">
+                        <label for="train-arri-input">First Arrival Time (Military HH:mm)</label>
+
+                        <input id="train-freq-input">
+                        <label for="train-freq-input">Arrival Frequency (minutes)</label>
+                        <br>
+                        <br>
+                        <div class="divider"></div>
+                        <br>
+                        <button class="btn waves-effect waves-light" type="submit" id="submit-train">ADD</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    <!-- </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/trainHandler.js"></script>
+</body>
+
+</html>
